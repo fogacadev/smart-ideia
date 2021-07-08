@@ -1,10 +1,10 @@
-﻿using SmartIdeia.Modules.Accounts.Entities;
+﻿using SmartIdeia.Src.Modules.Accounts.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SmartIdeia.Modules.Campaigns.Entities
+namespace SmartIdeia.Src.Modules.Campaigns.Entities
 {
     public class Campaign
     {

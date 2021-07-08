@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SmartIdeia.Modules.Ideas.Entities
+namespace SmartIdeia.Src.Middlewares
 {
-    public class Ideia
+    public class AppErrorMiddleware
     {
-        public long Id { get; set; }
+
     }
 }

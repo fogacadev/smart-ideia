@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartIdeia.Database;
-using SmartIdeia.Modules.Campaigns.Entities;
+using SmartIdeia.Src.Modules.Campaigns.Entities;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SmartIdeia.Modules.Campaigns.UseCases
+namespace SmartIdeia.Src.Modules.Campaigns.UseCases
 {
     public class CreateCampaignUseCase
     {

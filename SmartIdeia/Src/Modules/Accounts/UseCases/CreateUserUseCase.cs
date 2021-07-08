@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartIdeia.Database;
-using SmartIdeia.Modules.Accounts.Entities;
+using SmartIdeia.Src.Modules.Accounts.Entities;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SmartIdeia.Modules.Accounts.UseCases
+namespace SmartIdeia.Src.Modules.Accounts.UseCases
 {
     public class CreateUserUseCase
     {

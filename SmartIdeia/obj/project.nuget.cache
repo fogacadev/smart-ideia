@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ixdpTwha4ixHdGbU8pSUyjUpHx0M7rj6zjOLMBZ5Gf8RfIfqttJxsrgN73tJJD9gW4SNEvr7rq26wIjM7aBpuw==",
+  "dgSpecHash": "lBwdvX6NT4UbyMu2+Kk9MRzn9pmMq+9tivFidjCVq83vO1+X+mNFxuq7p4Wx7zfcdmXzgmfS9yVPQGw/IgLpzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Felip\\source\\repos\\SmartIdeia\\SmartIdeia\\SmartIdeia.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Felip\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Felip\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Felip\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Felip\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
