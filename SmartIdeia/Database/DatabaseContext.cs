@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartIdeia.Modules.Ideas.Entities;
 using SmartIdeia.Src.Modules.Accounts.Entities;
+using SmartIdeia.Src.Modules.ActionPlans.Entities;
 using SmartIdeia.Src.Modules.Campaigns.Entities;
 using SmartIdeia.Src.Modules.Responsibles.Entities;
 using SmartIdeia.Src.Modules.Themes.Entities;
@@ -23,5 +24,6 @@ namespace SmartIdeia.Database
         public DbSet<Theme> Themes { get; set; }
         public DbSet<Idea> Ideas { get; set; }
         public DbSet<Responsible> Responsibles { get; set; }
+        public DbSet<ActionPlan> ActionPlans { get; set; }
     }
 }

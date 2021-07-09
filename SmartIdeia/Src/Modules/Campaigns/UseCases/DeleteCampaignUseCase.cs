@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SmartIdeia.Database;
+using SmartIdeia.Src.Errors;
 using SmartIdeia.Src.Modules.Campaigns.Entities;
 using System;
 using System.Linq;
@@ -24,8 +25,21 @@ namespace SmartIdeia.Src.Modules.Campaigns.UseCases
 
             if (campaign == null)
             {
-                throw new Exception("Campaign not exists!");
+                throw new AppError("Campaign not exists!");
             }
+
+            //Verify if campaign is in use
+
+            var campaignInUse = await context
+                .Ideas
+                .Where(i => i.CampaignId == id)
+                .AnyAsync();
+
+            if (campaignInUse)
+            {
+                throw new AppError("The campaign cannot be deleted as it is in use.");
+            }
+
 
             context.Campaigns.Remove(campaign);
             await context.SaveChangesAsync();
