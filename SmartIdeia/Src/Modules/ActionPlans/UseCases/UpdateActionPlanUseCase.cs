@@ -40,7 +40,7 @@ namespace SmartIdeia.Src.Modules.ActionPlans.UseCases
             actionPlan.IdeaId = createdActionPlan.IdeaId;
 
             context.Entry(createdActionPlan).State = EntityState.Detached;
-            context.Entry(createdActionPlan).State = EntityState.Modified;
+            context.Entry(actionPlan).State = EntityState.Modified;
 
 
             await context.SaveChangesAsync();

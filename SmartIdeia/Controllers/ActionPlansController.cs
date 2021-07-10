@@ -69,7 +69,7 @@ namespace SmartIdeia.Controllers
             return Ok(actionPlan);
         }
 
-        [HttpDelete("{}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<ActionPlan>> DeleteActionPlan([FromRoute] long id) 
         {
             var deleteActionPlanUseCase = new DeleteActionPlanUseCase(context);

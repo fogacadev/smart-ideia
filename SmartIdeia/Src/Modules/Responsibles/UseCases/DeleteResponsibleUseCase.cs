@@ -30,7 +30,8 @@ namespace SmartIdeia.Src.Modules.Responsibles.UseCases
                 throw new AppError("Responsible not exists", HttpStatusCode.NotFound);
             }
 
-            context.Entry(responsible).State = EntityState.Deleted;
+            context.Responsibles.Remove(responsible);
+
             await context.SaveChangesAsync();
 
             return responsible;

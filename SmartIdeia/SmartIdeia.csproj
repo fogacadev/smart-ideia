@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Src\Modules\Accounts\Dtos\" />
-    <Folder Include="Src\Modules\Categories\" />
     <Folder Include="Src\Modules\Ideas\UseCases\" />
     <Folder Include="Src\Modules\Shared\" />
     <Folder Include="Src\Shared\" />
