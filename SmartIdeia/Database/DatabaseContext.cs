@@ -2,6 +2,7 @@
 using SmartIdeia.Modules.Ideas.Entities;
 using SmartIdeia.Src.Modules.Accounts.Entities;
 using SmartIdeia.Src.Modules.ActionPlans.Entities;
+using SmartIdeia.Src.Modules.Activities.Entities;
 using SmartIdeia.Src.Modules.Authors.Entities;
 using SmartIdeia.Src.Modules.Campaigns.Entities;
 using SmartIdeia.Src.Modules.Entries.Entities;
@@ -35,7 +36,7 @@ namespace SmartIdeia.Database
         public DbSet<ActionPlan> ActionPlans { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Entry> Entries { get; set; }
-
+        public DbSet<Activity> Activities { get; set; }
 
         public DbSet<Log> Logs { get; set; }
     }

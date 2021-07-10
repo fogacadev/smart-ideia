@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SmartIdeia.Database;
-using SmartIdeia.Modules.Campaigns.Entities;
-using SmartIdeia.Modules.Campaigns.UseCases;
+using SmartIdeia.Src.Modules.Campaigns.Entities;
+using SmartIdeia.Src.Modules.Campaigns.UseCases;
 using System;
 using System.Collections.Generic;
 using System.Linq;

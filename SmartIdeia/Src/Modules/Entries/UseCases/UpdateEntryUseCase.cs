@@ -74,7 +74,7 @@ namespace SmartIdeia.Src.Modules.Entries.UseCases
             {
                 IdeaId = entry.IdeaId,
                 UserId = userId,
-                Description = "Entry created",
+                Description = "Entry updated",
                 Entity = typeof(Entry).ToString(),
                 EntityId = entry.Id,
                 JsonObject = JsonConvert.SerializeObject(entry),
