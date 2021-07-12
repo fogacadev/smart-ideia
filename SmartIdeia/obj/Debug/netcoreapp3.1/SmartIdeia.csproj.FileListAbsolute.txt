@@ -61,3 +61,4 @@ C:\Users\Felip\source\repos\SmartIdeia\SmartIdeia\obj\Debug\netcoreapp3.1\SmartI
 C:\Users\Felip\source\repos\SmartIdeia\SmartIdeia\obj\Debug\netcoreapp3.1\SmartIdeia.dll
 C:\Users\Felip\source\repos\SmartIdeia\SmartIdeia\obj\Debug\netcoreapp3.1\SmartIdeia.pdb
 C:\Users\Felip\source\repos\SmartIdeia\SmartIdeia\obj\Debug\netcoreapp3.1\SmartIdeia.genruntimeconfig.cache
+C:\Users\Felip\source\repos\SmartIdeia\SmartIdeia\obj\Debug\netcoreapp3.1\SmartIdeia.csprojAssemblyReference.cache
