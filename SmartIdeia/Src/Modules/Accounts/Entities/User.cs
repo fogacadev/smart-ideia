@@ -18,5 +18,10 @@ namespace SmartIdeia.Src.Modules.Accounts.Entities
         public DateTime TokenCreatedAt { get; set; }
         public int LoginAttempts { get; set; }
         public bool BlockedByLoginAttempt { get; set; }
+
+
+        //relations
+
+        public List<UserToken> UserTokens { get; set; }
     }
 }
