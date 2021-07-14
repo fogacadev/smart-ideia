@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Src\Modules\Accounts\Dtos\" />
+    <Folder Include="Src\Modules\IdeaRating\UseCases\" />
     <Folder Include="Src\Modules\Ideas\UseCases\" />
     <Folder Include="Src\Modules\Shared\" />
     <Folder Include="Src\Shared\" />
@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.7">
       <PrivateAssets>all</PrivateAssets>

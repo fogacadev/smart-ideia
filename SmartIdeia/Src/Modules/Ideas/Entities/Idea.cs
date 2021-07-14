@@ -3,6 +3,8 @@ using SmartIdeia.Src.Modules.ActionPlans.Entities;
 using SmartIdeia.Src.Modules.Activities.Entities;
 using SmartIdeia.Src.Modules.Authors.Entities;
 using SmartIdeia.Src.Modules.Campaigns.Entities;
+using SmartIdeia.Src.Modules.Entries.Entities;
+using SmartIdeia.Src.Modules.IdeaRating.Entities;
 using SmartIdeia.Src.Modules.Themes.Entities;
 using System;
 using System.Collections.Generic;
@@ -40,10 +42,14 @@ namespace SmartIdeia.Modules.Ideas.Entities
         public string Unit { get; set; }
         public decimal Goal { get; set; }
         public decimal GoalAchievement { get; set; }
+        public List<Entry> Entries { get; set; }
+
 
         //gamefication
         public decimal GeneratedPoints  { get; set; }
         public decimal AwardInPoints { get; set; }
+        public List<IdeaRating> IdeaRatings { get; set; }
+
 
         public User CreatedBy { get; set; }
         public long CreatedById { get; set; }
