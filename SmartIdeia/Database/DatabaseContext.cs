@@ -6,7 +6,9 @@ using SmartIdeia.Src.Modules.Activities.Entities;
 using SmartIdeia.Src.Modules.Authors.Entities;
 using SmartIdeia.Src.Modules.Campaigns.Entities;
 using SmartIdeia.Src.Modules.Entries.Entities;
+using SmartIdeia.Src.Modules.IdeaRating.Entities;
 using SmartIdeia.Src.Modules.Logs.Entities;
+using SmartIdeia.Src.Modules.Ratings.Entities;
 using SmartIdeia.Src.Modules.Responsibles.Entities;
 using SmartIdeia.Src.Modules.Themes.Entities;
 using System;
@@ -39,6 +41,10 @@ namespace SmartIdeia.Database
         public DbSet<Author> Authors { get; set; }
         public DbSet<Entry> Entries { get; set; }
         public DbSet<Activity> Activities { get; set; }
+        public DbSet<IdeaRating> IdeaRatings { get; set; }
+
+        public DbSet<RatingGroup> RatingGroups { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
 
         public DbSet<Log> Logs { get; set; }
     }
