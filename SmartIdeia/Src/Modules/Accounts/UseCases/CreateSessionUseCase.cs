@@ -18,8 +18,15 @@ namespace SmartIdeia.Src.Modules.Accounts.UseCases
     public class CreateSessionUseCase
     {
         private readonly DatabaseContext context;
-        public CreateSessionUseCase(DatabaseContext context)
+        private readonly CreateJwtTokenUseCase createJwtTokenUseCase;
+        private readonly CreateRandomTokenUseCase createRandomTokenUseCase;
+
+        public CreateSessionUseCase(DatabaseContext context, 
+            CreateJwtTokenUseCase createJwtTokenUseCase,
+            CreateRandomTokenUseCase createRandomTokenUseCase)
         {
+            this.createRandomTokenUseCase = createRandomTokenUseCase;
+            this.createJwtTokenUseCase = createJwtTokenUseCase;
             this.context = context;
         }
 
@@ -43,30 +50,21 @@ namespace SmartIdeia.Src.Modules.Accounts.UseCases
             user.LoggedIn = DateTime.Now;
 
             //Create Token
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("SDKAJDLKAJSKDLJASLD");
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(new Claim[]
-                {
-                    new Claim(ClaimTypes.Sid, user.Id.ToString()),
-                    new Claim(ClaimTypes.Email, user.Email)
-                }),
-                Expires = DateTime.UtcNow.AddHours(2),
-                SigningCredentials = 
-                new SigningCredentials(new SymmetricSecurityKey(key),
-                SecurityAlgorithms.HmacSha256Signature)
-            };
+            var token = createJwtTokenUseCase.Execute(user);
 
-            var securityToken = tokenHandler.CreateToken(tokenDescriptor);
-            var token = tokenHandler.WriteToken(securityToken);
+            //remove refrash tokens
+            var userTokens = await context
+                .UserTokens
+                .Where(t => t.UserId == user.Id)
+                .ToListAsync();
+            context.UserTokens.RemoveRange(userTokens);
 
-            //Create refrash_token
+            //Create refresh_token
             var userToken = new UserToken
             {
                 CreatedAt = DateTime.Now,
                 Expires_date = DateTime.Now.AddHours(1),
-                RefreshToken = "",
+                RefreshToken = createRandomTokenUseCase.Execute(),
                 UserId = user.Id
             };
 
@@ -78,7 +76,7 @@ namespace SmartIdeia.Src.Modules.Accounts.UseCases
             {
                 User = user,
                 Token = token,
-                RefreshToken = ""
+                RefreshToken = userToken.RefreshToken
             };
 
             return tokenReturn;

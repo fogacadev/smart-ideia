@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using SmartIdeia.Src.Modules.Accounts.UseCases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,11 @@ namespace SmartIdeia
                 };
             });
 
+
+            services.AddTransient<CreateJwtTokenUseCase>();
+            services.AddTransient<CreateRandomTokenUseCase>();
+            services.AddTransient<CreateSessionUseCase>();
+            services.AddTransient<RefreshTokenUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
